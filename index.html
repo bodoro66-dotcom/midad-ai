@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#082b43">
+<title>مِداد | المعالج الذكي لفجوات التعلّم</title>
+<style>
+:root{--navy:#082b43;--navy2:#10465c;--teal:#087f86;--aqua:#54c0c0;--gold:#c99a35;--cream:#f6f0e5;--bg:#f3f7f8;--ink:#173449;--muted:#647985;--line:#dce7eb;--white:#fff;--shadow:0 12px 30px #082b4310}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Tahoma,Arial,sans-serif;color:var(--ink);line-height:1.7}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{max-width:1200px;margin:auto;padding:18px}.top{background:linear-gradient(115deg,#061f34,#0c4058);color:#fff;border-radius:24px;padding:24px;position:relative;overflow:hidden;box-shadow:var(--shadow)}.top:after{content:"";position:absolute;left:-35px;top:-100px;width:320px;height:320px;border:1px solid #54c0c025;border-radius:50%;box-shadow:0 0 0 35px #54c0c012,0 0 0 75px #54c0c00a}.brand{display:flex;align-items:center;gap:15px;position:relative;z-index:1}.brandmark{width:66px;height:66px;flex:none}.brand h1{margin:0;font-size:clamp(26px,4vw,38px);letter-spacing:.2px}.brand p{margin:0;color:#bfe4e6;font-size:14px}.tagline{position:relative;z-index:1;margin:18px 0 0;color:#e3eef0}.owner{display:inline-block;position:relative;z-index:1;margin-top:12px;padding:5px 11px;border:1px solid #ffffff35;border-radius:99px;color:#f1d89b;font-size:12px}.nav{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.nav button{background:#fff;border:1px solid var(--line);border-radius:15px;text-align:right;padding:13px 15px;color:var(--ink);display:flex;gap:11px;align-items:center;box-shadow:0 5px 15px #082b4305}.nav button.active{border-color:var(--teal);box-shadow:0 0 0 2px #087f8615}.nav .icon{display:grid;place-items:center;background:#e3f5f4;width:42px;height:42px;border-radius:13px;font-size:21px}.nav strong{display:block}.nav small{display:block;color:var(--muted);font-size:12px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:21px;margin:13px 0;box-shadow:var(--shadow)}h2{font-size:21px;color:var(--navy);margin:0 0 3px}.sub{color:var(--muted);font-size:13px;margin:0 0 17px}.section{font-weight:bold;color:var(--navy);margin:22px 0 11px;border-right:4px solid var(--teal);padding-right:10px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.field{display:flex;flex-direction:column;gap:5px;min-width:0}.field label{font-size:13px;font-weight:bold;color:#425b69}.field input,.field select,.field textarea{border:1px solid #d3e0e5;border-radius:11px;padding:11px;background:#fff;color:var(--ink);width:100%;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px #087f8616}.field textarea{min-height:85px;resize:vertical}.span2{grid-column:span 2}.span3{grid-column:span 3}.notice{background:#eef8f7;border:1px solid #d2eeeb;border-radius:12px;padding:11px 13px;color:#245b5a;font-size:13px;margin:13px 0}.btns{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.btn{border:0;border-radius:11px;padding:11px 15px;font-weight:bold}.primary{background:var(--teal);color:#fff}.secondary{background:#eaf0f3;color:var(--navy)}.gold{background:#f8f0df;color:#71551e}.danger{background:#fbeaea;color:#a13e3e}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:15px 0}.metric{border:1px solid var(--line);background:#fbfdfd;border-radius:14px;padding:13px}.metric small{display:block;color:var(--muted)}.metric strong{display:block;font-size:24px;color:var(--navy);margin:4px 0}.metric em{font-style:normal;color:var(--teal);font-size:12px}.chart{border:1px solid var(--line);border-radius:16px;padding:17px;margin-top:13px}.chart h3{margin:0 0 12px;font-size:16px}.chartrow{display:grid;grid-template-columns:100px 1fr 52px;gap:10px;align-items:center;margin:14px 0;font-size:13px}.track{height:16px;border-radius:99px;background:#e9eff2;overflow:hidden;position:relative}.fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#087f86,#54c0c0);transition:width .35s}.fill.after{background:linear-gradient(90deg,#c99a35,#efd18b)}.output{white-space:pre-wrap;background:#f8fafb;border:1px solid var(--line);border-radius:13px;padding:15px;min-height:95px}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:500px;font-size:13px}th,td{border:1px solid var(--line);padding:9px;text-align:right}th{background:#edf5f6;color:var(--navy)}.badge{background:#e1f5f2;color:#12635f;border-radius:99px;padding:5px 10px;font-size:12px}.saved{border:1px solid var(--line);border-radius:12px;padding:11px;margin:8px 0;display:flex;justify-content:space-between;align-items:center;gap:10px}.saved small{display:block;color:var(--muted)}.muted{color:var(--muted);font-size:12px}.hidden{display:none!important}.footer{text-align:center;color:var(--muted);font-size:12px;padding:18px}.reportTitle{display:flex;justify-content:space-between;align-items:start;gap:12px;flex-wrap:wrap}
+@media(max-width:760px){.wrap{padding:11px}.top{padding:18px}.nav{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.span3{grid-column:span 2}.metrics{grid-template-columns:repeat(2,1fr)}.card{padding:15px}.chartrow{grid-template-columns:80px 1fr 44px}}@media(max-width:480px){.grid{grid-template-columns:1fr}.span2,.span3{grid-column:span 1}.btns .btn{width:100%}.btns{display:grid;grid-template-columns:1fr}.chartrow{grid-template-columns:72px 1fr 40px;font-size:12px}.brandmark{width:55px;height:55px}}@media print{body{background:#fff}.wrap{padding:0}.top,.nav,.no-print,.footer{display:none!important}.card{display:none!important;box-shadow:none;border:0;padding:0;margin:0}.card#report{display:block!important}.card#report .section{margin-top:14px}.output{background:white}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+ <div class="brand">
+ <svg class="brandmark" viewBox="0 0 100 100" role="img" aria-label="شعار مِداد"><path d="M8 67 Q29 35 49 63 Q63 37 91 26 L91 70 Q66 64 50 83 Q29 62 8 82Z" fill="#0a8990"/><path d="M14 65 Q31 43 48 65 L48 80 Q30 61 14 78Z" fill="#f4d99e"/><path d="M52 64 Q67 43 85 34 L85 64 Q66 63 52 80Z" fill="#f4d99e"/><path d="M48 64 L48 86" stroke="#fff" stroke-width="3"/><path d="M16 42 L22 35 M27 29 L32 21 M40 22 L42 13 M57 24 L63 17 M69 31 L78 25" stroke="#54c0c0" stroke-width="5" stroke-linecap="round"/><rect x="20" y="18" width="6" height="6" rx="1" fill="#54c0c0"/><rect x="32" y="9" width="6" height="6" rx="1" fill="#d4a640"/><rect x="60" y="8" width="6" height="6" rx="1" fill="#54c0c0"/></svg>
+ <div><h1>مِداد</h1><p>المعالج الذكي لفجوات التعلّم</p></div></div>
+ <p class="tagline">من تشخيص الفجوة إلى قياس الأثر — خطوة تربوية أوضح، وقرار مبني على البيانات.</p>
+ <span class="owner">حقوق الفكرة والمحتوى © بدور مبارك العصيمي · 2026</span>
+</header>
+<nav class="nav no-print">
+<button class="active" data-page="analysis"><span class="icon">📊</span><span><strong>تحليل النتائج</strong><small>مقارنة الإتقان قبل التدخل وبعده</small></span></button>
+<button data-page="plan"><span class="icon">🎯</span><span><strong>الخطة العلاجية</strong><small>إعداد مسودة قابلة للتعديل</small></span></button>
+<button data-page="report"><span class="icon">📄</span><span><strong>التقارير والتوثيق</strong><small>تقرير جاهز للطباعة</small></span></button>
+</nav>
+
+<section class="card" id="analysis">
+<h2>تحليل النتائج</h2><p class="sub">أدخلي بيانات المدرسة والمهارة كما وردت في مصدرك المعتمد، ثم سجّلي الأعداد الإجمالية.</p>
+<div class="section">بيانات المدرسة والمهارة</div>
+<div class="grid">
+<div class="field"><label>اسم المدرسة</label><input id="school" placeholder="اسم المدرسة"></div>
+<div class="field"><label>اسم المعلمة</label><input id="teacher" value="بدور مبارك العصيمي"></div>
+<div class="field"><label>اسم قائدة المدرسة</label><input id="principal" placeholder="اسم قائدة المدرسة"></div>
+<div class="field"><label>تاريخ التقرير</label><input id="date" type="date"></div>
+<div class="field"><label>المادة</label><select id="subject"><option value="">اختاري المادة</option><option>المهارات الرقمية</option><option>الرياضيات</option><option>العلوم</option><option>لغتي الخالدة</option><option>الدراسات الاجتماعية</option><option>اللغة الإنجليزية</option><option>التربية الإسلامية</option><option>مهارات حياتية وأسرية</option><option>أخرى</option></select></div>
+<div class="field"><label>الصف</label><select id="grade"><option value="">اختاري الصف</option><option>الأول المتوسط</option><option>الثاني المتوسط</option><option>الثالث المتوسط</option></select></div>
+<div class="field"><label>الفصل الدراسي</label><select id="term"><option value="">اختاري الفصل</option><option>الأول</option><option>الثاني</option></select></div>
+<div class="field"><label>الوحدة</label><input id="unit" placeholder="اكتبي اسم الوحدة"></div>
+<div class="field"><label>اسم الدرس</label><input id="lesson" placeholder="كما ورد في الكتاب"></div>
+<div class="field span2"><label>المهارة المستهدفة</label><input id="skill" placeholder="اكتبي المهارة وفق مصدرها المعتمد"></div>
+<div class="field"><label>مصدر المهارة</label><select id="source"><option value="">اختاري المصدر</option><option>كتاب الطالب</option><option>ناتج تعلم</option><option>اختبار تشخيصي</option><option>خطة المنهج</option><option>مصدر آخر</option></select></div>
+<div class="field span3"><label>تفاصيل المصدر (اختياري)</label><input id="sourceDetail" placeholder="الفصل أو الصفحة أو رقم ناتج التعلم"></div>
+</div>
+<div class="section">النتائج الإجمالية</div>
+<div class="grid">
+<div class="field"><label>عدد الطالبات المستهدفات</label><input id="target" inputmode="numeric" placeholder="مثال: 30"></div>
+<div class="field"><label>عدد المتقنات قبل التدخل</label><input id="pre" inputmode="numeric" placeholder="مثال: 12"></div>
+<div class="field"><label>عدد المتقنات بعد التدخل</label><input id="post" inputmode="numeric" placeholder="مثال: 24"></div>
+</div>
+<div class="notice">الخصوصية أولًا: أدخلي أعدادًا إجمالية فقط، ولا تكتبي أسماء الطالبات أو بياناتهن الفردية.</div><div id="validation" class="muted"></div>
+<div class="metrics">
+<div class="metric"><small>الإتقان قبل التدخل</small><strong id="preRate">—</strong><em>نسبة مئوية</em></div>
+<div class="metric"><small>الإتقان بعد التدخل</small><strong id="postRate">—</strong><em>نسبة مئوية</em></div>
+<div class="metric"><small>مقدار التحسن</small><strong id="change">—</strong><em>نقطة مئوية</em></div>
+<div class="metric"><small>غير المتقنات قبل التدخل</small><strong id="notMastered">—</strong><em>عدد إجمالي</em></div>
+</div>
+<div class="chart" aria-live="polite"><h3>الرسم البياني لمقارنة الإتقان</h3>
+<div class="chartrow"><span>قبل التدخل</span><div class="track"><div id="preBar" class="fill"></div></div><b id="preLabel">—</b></div>
+<div class="chartrow"><span>بعد التدخل</span><div class="track"><div id="postBar" class="fill after"></div></div><b id="postLabel">—</b></div>
+<p id="interpretation" class="muted">أدخلي الأعداد الثلاثة لعرض النسب والرسم البياني.</p></div>
+<div class="btns no-print"><button class="btn primary" id="goPlan">الانتقال إلى الخطة العلاجية ←</button><button class="btn secondary" id="save">حفظ السجل في هذا المتصفح</button><button class="btn secondary" id="clear">مسح الحقول</button></div>
+</section>
+
+<section class="card hidden" id="plan">
+<h2>الخطة العلاجية</h2><p class="sub">أنشئي مسودة أولية ثم راجعيها بما يتناسب مع المهارة ومستوى الطالبات.</p>
+<div class="notice">هذه النسخة لا تتصل مباشرة بخدمة ذكاء اصطناعي؛ يمكنها إعداد مسودة منظمة وطلب جاهز لنسخه إلى أداة خارجية.</div>
+<div class="grid">
+<div class="field"><label>وصف الفجوة التعليمية</label><textarea id="gap" placeholder="ما التعثر الذي ظهر؟"></textarea></div>
+<div class="field"><label>الهدف العلاجي</label><textarea id="goal" placeholder="ما الأداء المتوقع بعد التدخل؟"></textarea></div>
+<div class="field"><label>مدة التدخل</label><select id="duration"><option>حصة واحدة</option><option>حصتان</option><option>أسبوع</option><option>أسبوعان</option><option>تحدد حسب الحاجة</option></select></div>
+<div class="field"><label>طريقة التدخل</label><select id="approach"><option>شرح موجّه وتدريب متدرج</option><option>تعلم تعاوني</option><option>محطات تعلم</option><option>تعلم قائم على المشكلات</option><option>بطاقات وأنشطة قصيرة</option><option>أخرى</option></select></div>
+<div class="field"><label>مراعاة الفروق الفردية</label><textarea id="different" placeholder="دعم إضافي أو نشاط إثرائي"></textarea></div>
+<div class="field"><label>شواهد التنفيذ</label><textarea id="evidence" placeholder="ورقة عمل، تقويم قصير، ملاحظة أداء"></textarea></div>
+<div class="field"><label>نوع النشاط العلاجي المطلوب</label><select id="activityType"><option>ورقة عمل تفاعلية قصيرة</option><option>لعبة تعليمية صفية</option><option>بطاقات سؤال وجواب</option><option>نشاط تعاوني ضمن مجموعات</option><option>تحدٍ رقمي أو محاكاة</option><option>نشاط عملي خطوة بخطوة</option><option>تقويم علاجي قصير مع تغذية راجعة</option></select></div>
+<div class="field"><label>مستوى النشاط</label><select id="activityLevel"><option>مبسط جدًا مع تدرج في الصعوبة</option><option>متوسط</option><option>متدرج: دعم ثم ممارسة مستقلة</option></select></div>
+<div class="field"><label>وقت التنفيذ</label><select id="activityTime"><option>5 دقائق</option><option>10 دقائق</option><option>15 دقيقة</option><option>20 دقيقة</option><option>حصة كاملة</option></select></div>
+<div class="field span3"><label>وصف الخطأ الشائع أو إجابة الطالبات (اختياري)</label><textarea id="commonError" placeholder="مثال: تخلط المتعلمات بين المكونات المادية والبرمجية"></textarea></div>
+<div class="field span3"><label>ملاحظات إضافية</label><textarea id="notes"></textarea></div>
+</div>
+<div class="btns no-print"><button class="btn primary" id="makePlan">إنشاء مسودة الخطة</button><button class="btn primary" id="generateActivity">✨ ولّدي النشاط بالذكاء الاصطناعي</button><button class="btn secondary" id="makePrompt">إنشاء طلب جاهز للذكاء الاصطناعي</button><button class="btn gold" id="copyPlan">نسخ مسودة الخطة</button></div>
+<div class="section">النشاط العلاجي الذي ولّده الذكاء الاصطناعي</div>
+<div id="aiStatus" class="notice">بعد إعداد الاتصال الآمن، سيولّد مِداد نشاطًا مرتبطًا بالمهارة المدخلة مباشرة. يجب مراجعة النشاط قبل تطبيقه.</div>
+<div id="activityOutput" class="output">لم يُولّد نشاط بعد.</div>
+<div class="btns no-print"><button class="btn secondary" id="copyActivity">نسخ النشاط</button><button class="btn secondary" id="useActivityInReport">إضافة النشاط إلى التقرير</button></div>
+<div class="section">مسودة الخطة</div><div id="planOutput" class="output">اضغطي «إنشاء مسودة الخطة» لبدء المسودة.</div>
+<div class="section">طلب جاهز لأداة ذكاء اصطناعي</div><div id="promptOutput" class="output">سيظهر هنا طلب قابل للنسخ.</div>
+<div class="btns no-print"><button class="btn secondary" data-go="analysis">← العودة للتحليل</button><button class="btn primary" data-go="report">عرض التقرير ←</button></div>
+</section>
+
+<section class="card hidden" id="report">
+<div class="reportTitle"><div><h2>التقرير التربوي لمتابعة فجوة تعلم</h2><p class="sub">مِداد | المعالج الذكي لفجوات التعلّم</p></div><span class="badge">إعداد: بدور مبارك العصيمي</span></div>
+<div class="section">بيانات التقرير</div><div class="tablewrap"><table><tbody id="metaRows"></tbody></table></div>
+<div class="section">ملخص النتائج</div><div class="tablewrap"><table><thead><tr><th>المؤشر</th><th>النتيجة</th></tr></thead><tbody id="statsRows"></tbody></table></div>
+<div class="chart"><h3>الرسم البياني لمقارنة الإتقان</h3><div class="chartrow"><span>قبل التدخل</span><div class="track"><div id="rPreBar" class="fill"></div></div><b id="rPreLabel">—</b></div><div class="chartrow"><span>بعد التدخل</span><div class="track"><div id="rPostBar" class="fill after"></div></div><b id="rPostLabel">—</b></div></div>
+<div class="section">الخطة العلاجية</div><div id="rPlan" class="output">لم تُنشأ مسودة بعد.</div>
+<div class="section">قراءة النتائج والتوصيات</div><div id="rRec" class="output"></div>
+<div class="grid" style="margin-top:24px"><div class="field"><label>توقيع المعلمة: بدور مبارك العصيمي</label><div style="height:38px;border-bottom:1px solid #91a4ad"></div></div><div class="field"><label>اعتماد قائدة المدرسة</label><div style="height:38px;border-bottom:1px solid #91a4ad"></div></div><div class="field"><label>التاريخ</label><div id="rDate" style="height:38px;border-bottom:1px solid #91a4ad"></div></div></div>
+<div class="btns no-print"><button class="btn primary" id="refresh">تحديث التقرير</button><button class="btn primary" id="print">طباعة / حفظ PDF</button><button class="btn secondary" id="csv">تصدير CSV</button><button class="btn secondary" id="save2">حفظ السجل</button></div>
+<div class="section no-print">السجلات المحفوظة على هذا المتصفح</div><div id="savedRecords" class="no-print"></div><p class="muted no-print">الحفظ محلي في المتصفح الحالي فقط، وليس قاعدة بيانات سحابية.</p>
+</section>
+<footer class="footer">مِداد © 2026 · حقوق الفكرة والمحتوى والتصميم محفوظة لبدور مبارك العصيمي · أداة مساندة لا تُعد اعتمادًا رسميًا.</footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const ids=['school','teacher','principal','date','subject','grade','term','unit','lesson','skill','source','sourceDetail','target','pre','post','gap','goal','duration','approach','different','evidence','activityType','activityLevel','activityTime','commonError','notes'];
+const now=new Date();$('date').value=new Date(now.getTime()-now.getTimezoneOffset()*60000).toISOString().slice(0,10);
+function digits(s){return String(s??'').replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).trim()}
+function v(id){return $(id).value.trim()}function n(id){const s=digits(v(id));return s===''?null:Number(s)}function pct(a,b){return b>0?100*a/b:null}function fmt(x){return x===null||!Number.isFinite(x)?'—':x.toLocaleString('ar-SA',{maximumFractionDigits:1})+'%'}
+function calc(){let t=n('target'),p=n('pre'),a=n('post'),err=[];if([t,p,a].some(x=>x!==null)&&[t,p,a].some(x=>x===null))err.push('أكملي الأعداد الثلاثة.');if(t!==null&&(!Number.isInteger(t)||t<1))err.push('إجمالي المستهدفات يجب أن يكون عددًا صحيحًا أكبر من صفر.');if(t!==null&&p!==null&&(!Number.isInteger(p)||p<0||p>t))err.push('عدد المتقنات قبل التدخل يجب أن يكون بين صفر والإجمالي.');if(t!==null&&a!==null&&(!Number.isInteger(a)||a<0||a>t))err.push('عدد المتقنات بعد التدخل يجب أن يكون بين صفر والإجمالي.');let ok=t!==null&&p!==null&&a!==null&&Number.isInteger(t)&&Number.isInteger(p)&&Number.isInteger(a)&&t>0&&p>=0&&a>=0&&p<=t&&a<=t;let pr=ok?pct(p,t):null,ar=ok?pct(a,t):null,ch=ok?ar-pr:null;$('preRate').textContent=fmt(pr);$('postRate').textContent=fmt(ar);$('change').textContent=ch===null?'—':(ch>0?'+':'')+ch.toLocaleString('ar-SA',{maximumFractionDigits:1});$('notMastered').textContent=ok?(t-p).toLocaleString('ar-SA'):'—';$('preBar').style.width=(pr??0)+'%';$('postBar').style.width=(ar??0)+'%';$('preLabel').textContent=fmt(pr);$('postLabel').textContent=fmt(ar);$('validation').textContent=err.join(' ');$('interpretation').textContent=ok?(ch>0?`تحسن الإتقان بمقدار ${ch.toLocaleString('ar-SA',{maximumFractionDigits:1})} نقطة مئوية. راجعي الشواهد للتأكد من تفسير التحسن.`:ch<0?`انخفض الإتقان بمقدار ${Math.abs(ch).toLocaleString('ar-SA',{maximumFractionDigits:1})} نقطة مئوية؛ راجعي التدخل وأداة القياس.`:'لم يتغير معدل الإتقان بين القياسين؛ راجعي ملاءمة الأنشطة وأداة التقويم.'):'أدخلي الأعداد الثلاثة لعرض النسب والرسم البياني.';return{ok,t,p,a,pr,ar,ch}}
+function all(){let o={};ids.forEach(k=>o[k]=v(k));return o}
+function go(id){['analysis','plan','report'].forEach(x=>$(x).classList.toggle('hidden',x!==id));document.querySelectorAll('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='report')refreshReport();window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>go(b.dataset.page));document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));['target','pre','post'].forEach(k=>$(k).addEventListener('input',()=>{calc();}));
+function makePlan(){let c=calc(),o=all();let s=`مِداد | مسودة خطة علاجية\nالمادة: ${o.subject||'غير محددة'} | الصف: ${o.grade||'غير محدد'} | الفصل الدراسي: ${o.term||'غير محدد'}\nالوحدة: ${o.unit||'غير محددة'}\nالدرس: ${o.lesson||'غير محدد'}\nالمهارة المستهدفة: ${o.skill||'غير محددة'}\nمصدر المهارة: ${o.source||'غير محدد'} ${o.sourceDetail}\n\nوصف الفجوة: ${o.gap||'تُحدد بعد مراجعة إجابات التقويم التشخيصي والأخطاء الشائعة.'}\nالهدف العلاجي: ${o.goal||'أن تؤدي المتعلمات المهارة المستهدفة وفق معيار إتقان قابل للقياس.'}\nمدة التدخل: ${o.duration}\nطريقة التدخل: ${o.approach}\n\nخطوات التنفيذ المقترحة:\n١. تهيئة قصيرة وتوضيح هدف التعلم.\n٢. نمذجة المهارة بمثال واضح مرتبط بالدرس.\n٣. تدريب موجّه مع تغذية راجعة فورية.\n٤. ممارسة مستقلة متدرجة الدعم.\n٥. تقويم ختامي يقيس المهارة نفسها ومقارنة النتائج بالتشخيص القبلي.\n\nمراعاة الفروق الفردية: ${o.different||'تقديم أمثلة وتلميحات إضافية لمن تحتاج، ونشاط إثرائي للمتقنات.'}\nأداة التحقق: مهمة قصيرة مرتبطة مباشرة بالمهارة ومعيار إتقان محدد مسبقًا.\nشواهد التنفيذ: ${o.evidence||'نتائج التقويم القبلي والبعدي، عينة من المهمة، وسجل التغذية الراجعة.'}\nالنتائج: ${c.ok?`قبل التدخل ${fmt(c.pr)}، بعد التدخل ${fmt(c.ar)}، التغير ${(c.ch>0?'+':'')+c.ch.toLocaleString('ar-SA',{maximumFractionDigits:1})} نقطة مئوية.`:'تستكمل بعد إدخال الأعداد.'}\nملاحظات: ${o.notes||'لا توجد'}\n\nتنبيه: مسودة أولية تستلزم مراجعة المعلمة ومطابقة الأنشطة والأسئلة للمصدر المعتمد قبل التطبيق.`;$('planOutput').textContent=s;return s}
+$('makePlan').onclick=makePlan;
+$('makePrompt').onclick=()=>{$('promptOutput').textContent=`أنت خبير تربوي في علاج فجوات التعلم للمرحلة المتوسطة في السعودية. صمم خطة علاجية عملية ولا تخترع مراجع أو أسماء رسمية غير موثقة. إذا لم تتوفر معلومات كافية عن المنهج، وضّح ذلك.\nالمادة: ${v('subject')||'غير محددة'}\nالصف: ${v('grade')||'غير محدد'}\nالفصل الدراسي: ${v('term')||'غير محدد'}\nالوحدة: ${v('unit')||'غير محددة'}\nالدرس: ${v('lesson')||'غير محدد'}\nالمهارة: ${v('skill')||'غير محددة'}\nمصدر المهارة: ${v('source')||'غير محدد'} ${v('sourceDetail')}\nعدد المستهدفات: ${v('target')||'غير مدخل'}، المتقنات قبل: ${v('pre')||'غير مدخل'}، المتقنات بعد: ${v('post')||'غير مدخل'}\nالفجوة: ${v('gap')||'تحدد من البيانات المتاحة بحذر'}\nالهدف: ${v('goal')||'اقترح هدفًا قابلًا للقياس'}\nمدة التدخل: ${v('duration')}، الطريقة: ${v('approach')}\nالمطلوب: هدف إجرائي، خطوات تنفيذ، نشاطان متدرجان، خمسة أسئلة مع إجابات نموذجية مرتبطة بالمهارة، تقويم ختامي، معيار إتقان، شواهد وتوصيات. ميّز المعلومات المؤكدة عن المقترحات.`};
+async function copy(t){try{await navigator.clipboard.writeText(t);alert('تم النسخ.')}catch(e){let x=document.createElement('textarea');x.value=t;document.body.appendChild(x);x.select();document.execCommand('copy');x.remove();alert('تم النسخ.')}}$('copyPlan').onclick=()=>copy($('planOutput').textContent);
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function refreshReport(){let c=calc(),o=all(),meta=[['المدرسة',o.school],['المعلمة',o.teacher],['قائدة المدرسة',o.principal],['التاريخ',o.date],['المادة',o.subject],['الصف',o.grade],['الفصل الدراسي',o.term],['الوحدة',o.unit],['الدرس',o.lesson],['المهارة',o.skill],['مصدر المهارة',(o.source+' '+o.sourceDetail).trim()]];$('metaRows').innerHTML=meta.map(r=>`<tr><th>${esc(r[0])}</th><td>${esc(r[1]||'—')}</td></tr>`).join('');let rows=[['عدد المستهدفات',c.ok?c.t:'—'],['المتقنات قبل التدخل',c.ok?c.p:'—'],['غير المتقنات قبل التدخل',c.ok?c.t-c.p:'—'],['المتقنات بعد التدخل',c.ok?c.a:'—'],['نسبة الإتقان قبل التدخل',fmt(c.pr)],['نسبة الإتقان بعد التدخل',fmt(c.ar)],['التغير في الإتقان',c.ch===null?'—':(c.ch>0?'+':'')+c.ch.toLocaleString('ar-SA',{maximumFractionDigits:1})+' نقطة مئوية']];$('statsRows').innerHTML=rows.map(r=>`<tr><th>${esc(r[0])}</th><td>${esc(r[1])}</td></tr>`).join('');$('rPreBar').style.width=(c.pr??0)+'%';$('rPostBar').style.width=(c.ar??0)+'%';$('rPreLabel').textContent=fmt(c.pr);$('rPostLabel').textContent=fmt(c.ar);$('rPlan').textContent=($('planOutput').textContent.startsWith('اضغطي')?'لم تُنشأ مسودة بعد. انتقلي إلى قسم الخطة العلاجية.':$('planOutput').textContent)+(($('activityOutput').textContent!=='لم يُولّد نشاط بعد.')?'\n\nالنشاط العلاجي المولّد بالذكاء الاصطناعي:\n'+$('activityOutput').textContent:'');$('rRec').textContent=c.ok?$('interpretation').textContent+'\n\nالتوصية: راجعي الأخطاء الشائعة ووثقي الأنشطة، ثم أعيدي قياس المهارة نفسها. إذا لم يتحقق التحسن المتوقع، عدلي الاستراتيجية وأعيدي التقويم.':'أدخلي الأعداد الصحيحة وتحققي من عدم تجاوز عدد المتقنات لإجمالي المستهدفات.';$('rDate').textContent=o.date||'';renderSaved()}
+$('refresh').onclick=refreshReport;$('print').onclick=()=>{refreshReport();window.print()};
+function records(){try{return JSON.parse(localStorage.getItem('midad_v2_records')||'[]')}catch(e){return[]}}
+function save(){let c=calc();if(!c.ok){alert('أدخلي الأعداد الثلاثة بشكل صحيح قبل الحفظ.');return}let r={...all(),metrics:{preRate:c.pr,postRate:c.ar,change:c.ch,notMastered:c.t-c.p},plan:$('planOutput').textContent};let a=records();a.unshift(r);localStorage.setItem('midad_v2_records',JSON.stringify(a.slice(0,40)));renderSaved();alert('تم حفظ السجل محليًا في هذا المتصفح.')}
+$('save').onclick=save;$('save2').onclick=save;
+function renderSaved(){let box=$('savedRecords');if(!box)return;let a=records();if(!a.length){box.innerHTML='<p class="muted">لا توجد سجلات محفوظة حتى الآن.</p>';return}box.innerHTML=a.map((r,i)=>`<div class="saved"><div><strong>${esc(r.skill||r.lesson||'سجل بدون عنوان')}</strong><small>${esc(r.subject||'')} · ${esc(r.grade||'')} · الإتقان بعد التدخل: ${fmt(r.metrics?.postRate)}</small></div><div><button class="btn secondary" data-load="${i}">استعادة</button> <button class="btn danger" data-del="${i}">حذف</button></div></div>`).join('');box.querySelectorAll('[data-load]').forEach(b=>b.onclick=()=>{let r=records()[+b.dataset.load];ids.forEach(k=>{if(r[k]!==undefined)$(k).value=r[k]});if(r.plan)$('planOutput').textContent=r.plan;calc();refreshReport();alert('تمت استعادة السجل.')});box.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{let a=records();a.splice(+b.dataset.del,1);localStorage.setItem('midad_v2_records',JSON.stringify(a));renderSaved()})}
+$('goPlan').onclick=()=>{makePlan();go('plan')};$('clear').onclick=()=>{if(!confirm('هل تريدين مسح الحقول الحالية؟'))return;ids.forEach(k=>{if(k!=='teacher'&&k!=='date')$(k).value=''});$('teacher').value='بدور مبارك العصيمي';$('planOutput').textContent='اضغطي «إنشاء مسودة الخطة» لبدء المسودة.';$('promptOutput').textContent='سيظهر هنا طلب قابل للنسخ.';$('activityOutput').textContent='لم يُولّد نشاط بعد.';$('aiStatus').textContent='بعد إعداد الاتصال الآمن، سيولّد مِداد نشاطًا مرتبطًا بالمهارة المدخلة مباشرة.';calc();refreshReport()};
+$('csv').onclick=()=>{let c=calc(),o=all(),rows=[['الحقل','القيمة'],...Object.entries(o),['نسبة الإتقان قبل التدخل',fmt(c.pr)],['نسبة الإتقان بعد التدخل',fmt(c.ar)],['التغير بالنقاط المئوية',c.ch??''],['غير المتقنات قبل التدخل',c.ok?c.t-c.p:'']];let csv='\ufeff'+rows.map(r=>r.map(x=>'"'+String(x??'').replace(/"/g,'""')+'"').join(',')).join('\r\n');let u=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));let a=document.createElement('a');a.href=u;a.download='midad-report.csv';a.click();URL.revokeObjectURL(u)};
+
+function buildActivityPrompt(){
+ const c=calc(),o=all();
+ return `أنت خبير تصميم أنشطة علاجية تعليمية للمرحلة المتوسطة في المملكة العربية السعودية. المطلوب إنشاء نشاط علاجي عملي قابل للاستخدام مباشرة، وليس خطة عامة أو شرحًا نظريًا. اربط كل سؤال وخطوة بالمهارة المدخلة تحديدًا. لا تخترع أسماء دروس أو نواتج تعلم رسمية ولا تنسب معلومات إلى وزارة التعليم دون مصدر. إذا كانت المهارة غامضة، اذكر ما يحتاج إلى توضيح بدل التخمين.
+بيانات السياق:
+المادة: ${o.subject||'غير محددة'}
+الصف: ${o.grade||'غير محدد'}
+الفصل الدراسي: ${o.term||'غير محدد'}
+الوحدة: ${o.unit||'غير محددة'}
+اسم الدرس كما أدخلته المعلمة: ${o.lesson||'غير محدد'}
+المهارة المستهدفة: ${o.skill||'غير محددة'}
+مصدر المهارة: ${o.source||'غير محدد'} ${o.sourceDetail||''}
+الفجوة التعليمية: ${o.gap||'استنتجها بحذر من وصف الخطأ الشائع والمهارة، وصرّح إن لم تكفِ المعلومات.'}
+الخطأ الشائع أو استجابة الطالبات: ${o.commonError||'لم يُذكر'}
+الهدف العلاجي: ${o.goal||'اقترح هدفًا إجرائيًا قابلًا للقياس دون ادعاء أنه نص رسمي.'}
+نوع النشاط المطلوب: ${o.activityType||'ورقة عمل تفاعلية قصيرة'}
+مستوى النشاط: ${o.activityLevel||'متدرج'}
+وقت التنفيذ: ${o.activityTime||'10 دقائق'}
+عدد الطالبات المستهدفات: ${o.target||'غير محدد'}
+النتائج: ${c.ok?`قبل التدخل ${fmt(c.pr)}، بعد التدخل ${fmt(c.ar)}.`:'لم تُدخل نتائج مكتملة.'}
+طريقة التدخل المفضلة: ${o.approach||'تدريب متدرج'}
+مراعاة الفروق الفردية: ${o.different||'اقترح دعمًا إضافيًا وإثراءً'}
+ملاحظات: ${o.notes||'لا توجد'}
+أخرج النشاط باللغة العربية، بعناوين واضحة وبهذا الترتيب:
+1. عنوان جذاب للنشاط.
+2. المهارة التي يعالجها (أعد صياغة المدخل فقط ولا تدّع توثيقها).
+3. الهدف السلوكي ومعيار النجاح.
+4. الأدوات وتجهيزات المعلمة.
+5. تعليمات تنفيذ خطوة بخطوة مع توزيع الوقت.
+6. محتوى النشاط الفعلي الجاهز: أسئلة أو بطاقات أو سيناريوهات أو خطوات مهمة، بحسب النوع المختار، لا تكتفِ باقتراح أن تنشئ المعلمة هذه المواد.
+7. الإجابات النموذجية والتغذية الراجعة لكل سؤال أو خطوة.
+8. طريقة تكييف النشاط للمتعثرات، وامتداد قصير للمتقنات.
+9. تقويم ختامي من 3 أسئلة أو مهام، مع الإجابات.
+10. مؤشر نجاح يسجل بعد التنفيذ، وشاهد مناسب للتوثيق.
+اجعل النشاط عمليًا، موجزًا بما يكفي للتطبيق، متوافقًا مع عمر المرحلة، ولا تضع أسماء طالبات أو بيانات شخصية. ضع تنبيهًا في النهاية بأن المعلمة تراجع دقة المحتوى ومطابقته للمصدر قبل التطبيق.`;
+}
+$('generateActivity').onclick=async()=>{
+ if(!v('skill')||!v('lesson')){alert('اكتبي اسم الدرس والمهارة المستهدفة أولًا حتى يولّد مِداد نشاطًا مرتبطًا بها.');return}
+ const btn=$('generateActivity');btn.disabled=true;btn.textContent='جارٍ توليد النشاط…';
+ $('aiStatus').textContent='يرسل مِداد تفاصيل المهارة إلى خدمة الذكاء الاصطناعي الآمنة. قد يستغرق ذلك عدة ثوانٍ.';
+ $('activityOutput').textContent='جارٍ إعداد النشاط العلاجي…';
+ try{
+   const res=await fetch('/.netlify/functions/generate-activity',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:buildActivityPrompt()})});
+   const data=await res.json();
+   if(!res.ok) throw new Error(data.error||'تعذر توليد النشاط. تحققي من إعداد الاتصال.');
+   $('activityOutput').textContent=data.activity||'وصل رد فارغ من خدمة الذكاء الاصطناعي.';
+   $('aiStatus').textContent='تم توليد النشاط. راجعي دقته وملاءمته للمصدر المعتمد قبل استخدامه.';
+ }catch(e){
+   $('activityOutput').textContent='لم يتم توليد النشاط. '+e.message;
+   $('aiStatus').textContent='يلزم إعداد مفتاح API في إعدادات Netlify وربطه بالوظيفة الآمنة قبل أن يعمل التوليد المباشر.';
+ }finally{btn.disabled=false;btn.textContent='✨ ولّدي النشاط بالذكاء الاصطناعي';}
+};
+$('copyActivity').onclick=()=>copy($('activityOutput').textContent);
+$('useActivityInReport').onclick=()=>{refreshReport();go('report')};
+
+calc();refreshReport();
+</script>
+</body></html>
