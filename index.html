@@ -166,9 +166,15 @@ $('generateActivity').onclick=async()=>{
  $('aiStatus').textContent='يرسل مِداد تفاصيل المهارة إلى خدمة الذكاء الاصطناعي الآمنة. قد يستغرق ذلك عدة ثوانٍ.';
  $('activityOutput').textContent='جارٍ إعداد النشاط العلاجي…';
  try{
-   const res=await fetch('/.netlify/functions/generate-activity',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:buildActivityPrompt()})});
-   const data=await res.json();
-   if(!res.ok) throw new Error(data.error||'تعذر توليد النشاط. تحققي من إعداد الاتصال.');
+   const res=await fetch('/.netlify/functions/generate-activity',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({prompt:buildActivityPrompt()})});
+   const raw=await res.text();
+   let data;
+   try { data=JSON.parse(raw); }
+   catch(parseError) {
+     const preview=(raw||'').replace(/\s+/g,' ').slice(0,220);
+     throw new Error('وصل رد غير متوقع من الخادم (HTTP '+res.status+'). بداية الرد: '+(preview||'رد فارغ')+' — أرسلي هذه الرسالة للدعم.');
+   }
+   if(!res.ok) throw new Error(data.error||('تعذر توليد النشاط (HTTP '+res.status+').'));
    $('activityOutput').textContent=data.activity||'وصل رد فارغ من خدمة الذكاء الاصطناعي.';
    $('aiStatus').textContent='تم توليد النشاط. راجعي دقته وملاءمته للمصدر المعتمد قبل استخدامه.';
  }catch(e){
