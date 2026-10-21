@@ -54,3 +54,4 @@ export default async (request, context) => {
     return Response.json({ error: "تعذر إعداد النشاط بسبب خطأ في الاتصال أو المعالجة. افتحي سجل الدالة لمعرفة التفاصيل." }, { status: 500 });
   }
 };
+
