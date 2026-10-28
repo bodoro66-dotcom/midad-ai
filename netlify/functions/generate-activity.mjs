@@ -1,57 +1,40 @@
 export default async (request, context) => {
-  if (request.method !== "POST") {
-    return Response.json({ error: "طريقة الطلب غير مدعومة. استخدمي زر توليد النشاط داخل الموقع." }, { status: 405 });
-  }
+  const json = (data, status = 200) => Response.json(data, { status, headers: { "Cache-Control": "no-store" } });
+  if (request.method !== "POST") return json({ error: "طريقة الطلب غير مدعومة." }, 405);
   const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    console.error("generate-activity: OPENAI_API_KEY is missing");
-    return Response.json({ error: "مفتاح OPENAI_API_KEY غير متاح للدالة. تحققي من متغيرات البيئة ثم أعيدي النشر." }, { status: 503 });
-  }
+  if (!apiKey) return json({ error: "مفتاح الخدمة غير متاح للدالة. سيظهر النشاط الاحتياطي؛ راجعي إعدادات البيئة لاحقًا." }, 503);
   try {
     const body = await request.json();
-    const prompt = typeof body.prompt === "string" ? body.prompt : "";
-    if (!prompt || prompt.length > 18000) {
-      return Response.json({ error: "الطلب فارغ أو أطول من الحد المسموح." }, { status: 400 });
+    const prompt = typeof body.prompt === "string" ? body.prompt.trim() : "";
+    if (!prompt || prompt.length > 12000) return json({ error: "الطلب فارغ أو أطول من الحد المسموح." }, 400);
+    let upstream;
+    try {
+      upstream = await fetch("https://api.openai.com/v1/responses", {
+        method: "POST",
+        headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ model: "gpt-6-luna", reasoning: { effort: "none" }, input: prompt, max_output_tokens: 1000 }),
+        signal: AbortSignal.timeout(17000)
+      });
+    } catch (err) {
+      const timedOut = err?.name === "TimeoutError" || err?.name === "AbortError";
+      console.error("midad-ai upstream failure", timedOut ? "timeout" : (err?.name || "network"));
+      return json({ error: timedOut ? "تأخر رد خدمة الذكاء الاصطناعي. استخدمي النشاط الاحتياطي الآن، ثم أعيدي المحاولة لاحقًا." : "تعذر الاتصال بخدمة الذكاء الاصطناعي. استخدمي النشاط الاحتياطي الآن." }, 504);
     }
-    const upstream = await fetch("https://api.openai.com/v1/responses", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${apiKey}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        model: "gpt-6-astra",
-        input: prompt,
-        max_output_tokens: 2400
-      })
-    });
     const raw = await upstream.text();
     let data;
-    try {
-      data = JSON.parse(raw);
-    } catch (parseError) {
-      console.error("generate-activity: OpenAI returned non-JSON response; status", upstream.status);
-      return Response.json({ error: "خدمة الذكاء الاصطناعي أعادت استجابة غير متوقعة (HTTP " + upstream.status + "). تحققي من اتصال الخدمة ثم أعيدي المحاولة." }, { status: 502 });
-    }
+    try { data = JSON.parse(raw); } catch { return json({ error: `استجابة غير متوقعة من الخدمة (HTTP ${upstream.status}).` }, 502); }
     if (!upstream.ok) {
-      const msg = data?.error?.message || "تعذر على خدمة الذكاء الاصطناعي إكمال الطلب.";
-      console.error("generate-activity: OpenAI API error", upstream.status, data?.error?.code || data?.error?.type || "unknown");
-      return Response.json({ error: msg }, { status: upstream.status >= 400 && upstream.status < 600 ? upstream.status : 502 });
+      const status = upstream.status;
+      console.error("midad-ai API status", status, "type", data?.error?.type || "unknown");
+      let message = status === 401 ? "مفتاح API غير صالح أو غير مقروء." : status === 403 ? "صلاحية حساب API أو النموذج غير كافية." : status === 429 ? "تجاوز الحساب حد الاستخدام أو يحتاج إلى رصيد API." : `تعذر التوليد (HTTP ${status}).`;
+      return json({ error: message }, status >= 400 && status < 600 ? status : 502);
     }
-    let activity = data.output_text || "";
-    if (!activity && Array.isArray(data.output)) {
-      activity = data.output.flatMap(item => item.content || [])
-        .filter(item => item.type === "output_text")
-        .map(item => item.text || "").join("\n");
-    }
-    if (!activity) {
-      console.error("generate-activity: API response did not contain output text");
-      return Response.json({ error: "لم يصل نص النشاط من خدمة الذكاء الاصطناعي." }, { status: 502 });
-    }
-    return Response.json({ activity });
-  } catch (error) {
-    console.error("generate-activity: unexpected error", error?.message || "unknown");
-    return Response.json({ error: "تعذر إعداد النشاط بسبب خطأ في الاتصال أو المعالجة. افتحي سجل الدالة لمعرفة التفاصيل." }, { status: 500 });
+    let activity = typeof data.output_text === "string" ? data.output_text.trim() : "";
+    if (!activity && Array.isArray(data.output)) activity = data.output.flatMap(x => Array.isArray(x.content) ? x.content : []).filter(x => x.type === "output_text").map(x => x.text || "").join("\n").trim();
+    if (!activity) return json({ error: "وصل رد الخدمة دون محتوى نشاط." }, 502);
+    return json({ activity, model: "gpt-6-luna" });
+  } catch (err) {
+    console.error("midad-ai request error", err?.name || "unknown");
+    return json({ error: "تعذر تجهيز الطلب. استخدمي النشاط الاحتياطي الآن." }, 500);
   }
 };
-
