@@ -12,8 +12,8 @@ export default async (request, context) => {
       upstream = await fetch("https://api.openai.com/v1/responses", {
         method: "POST",
         headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ model: "gpt-6-luna", reasoning: { effort: "none" }, input: prompt, max_output_tokens: 1000 }),
-        signal: AbortSignal.timeout(17000)
+        body: JSON.stringify({ model: "gpt-6-luna", reasoning: { effort: "none" }, input: prompt, max_output_tokens: 800 }),
+        signal: AbortSignal.timeout(22000)
       });
     } catch (err) {
       const timedOut = err?.name === "TimeoutError" || err?.name === "AbortError";
@@ -26,8 +26,8 @@ export default async (request, context) => {
     if (!upstream.ok) {
       const status = upstream.status;
       console.error("midad-ai API status", status, "type", data?.error?.type || "unknown");
-      let message = status === 401 ? "مفتاح API غير صالح أو غير مقروء." : status === 403 ? "صلاحية حساب API أو النموذج غير كافية." : status === 429 ? "تجاوز الحساب حد الاستخدام أو يحتاج إلى رصيد API." : `تعذر التوليد (HTTP ${status}).`;
-      return json({ error: message }, status >= 400 && status < 600 ? status : 502);
+      let message = status === 401 ? "مفتاح API غير صالح أو غير مقروء." : status === 403 ? "صلاحية حساب API أو النموذج غير كافية." : status === 429 ? "تجاوز الحساب حد الاستخدام أو يحتاج إلى رصيد API." : status === 400 ? `رفضت الخدمة صيغة الطلب: ${String(data?.error?.message || "يرجى مراجعة إعدادات الطلب").slice(0, 220)}` : `تعذر التوليد (HTTP ${status}).`;
+      return json({ error: message, upstreamStatus: status }, status >= 400 && status < 600 ? status : 502);
     }
     let activity = typeof data.output_text === "string" ? data.output_text.trim() : "";
     if (!activity && Array.isArray(data.output)) activity = data.output.flatMap(x => Array.isArray(x.content) ? x.content : []).filter(x => x.type === "output_text").map(x => x.text || "").join("\n").trim();
