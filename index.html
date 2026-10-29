@@ -25,6 +25,20 @@ body{background:radial-gradient(circle at 90% 0,#e1f4f4 0,transparent 28%),var(-
 @media(max-width:760px){.journey{padding:15px}.journey-steps{align-items:stretch;flex-direction:column}.journey-step{width:100%}.journey-connector{display:none}.journey-head h2{font-size:17px}.journey-head p{font-size:12px}}
 @media print{.journey{display:none!important}}
 
+
+/* تحديث تجربة مِداد: واجهة أوضح ولعبة تفاعلية قابلة للتشغيل */
+:root{--game-blue:#2368d8;--game-pink:#d83d7c;--game-violet:#7654d8;--game-green:#159b78}
+.top{background:linear-gradient(115deg,#082b43 0%,#0b5268 62%,#087f86 100%)}
+.top:before{content:"✦  ✧  ✦";position:absolute;right:5%;top:15px;font-size:35px;letter-spacing:22px;color:#f3cf73;opacity:.75;pointer-events:none}
+.hero-illustrations{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;position:relative;z-index:1}
+.hero-illustrations span{display:flex;align-items:center;gap:8px;padding:9px 13px;border-radius:14px;background:#ffffff16;border:1px solid #ffffff2b;color:#fff;font-size:13px}
+.hero-illustrations b{font-size:23px}
+.game-shell{background:linear-gradient(135deg,#f1f8ff,#fff 55%,#fff5f8);border:1px solid #d8e7f6;border-radius:22px;padding:20px;overflow:hidden}
+.game-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.game-title{margin:0;color:#123d72;font-size:22px}.game-meta{display:flex;gap:8px;flex-wrap:wrap}.game-pill{border-radius:99px;padding:5px 11px;font-size:12px;font-weight:bold;background:#e2edff;color:#2058a9}.game-pill.points{background:#fff0d6;color:#8a5a00}
+.game-progress{height:10px;background:#e6edf5;border-radius:99px;overflow:hidden;margin:12px 0 18px}.game-progress>div{height:100%;width:0;background:linear-gradient(90deg,#2368d8,#36b8ce);transition:width .25s}
+.game-question{background:#fff;border:1px solid #dfe9f4;border-radius:18px;padding:20px;box-shadow:0 8px 22px #1734490a}.game-question h3{margin:0 0 17px;color:#173449;font-size:19px;line-height:1.7}.game-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.game-choice{background:#f7faff;border:2px solid #dce7f5;border-radius:13px;padding:13px;text-align:right;color:#183b5a;font-weight:bold;min-height:54px}.game-choice:hover{border-color:#78a5ef;background:#eef5ff}.game-choice.correct{border-color:#159b78;background:#e7f8f0;color:#11684f}.game-choice.wrong{border-color:#dc5974;background:#fff0f3;color:#a72c4a}.game-choice:disabled{cursor:default;opacity:1}.game-feedback{margin-top:13px;padding:12px 14px;border-radius:12px;background:#eef6ff;color:#244d7c;min-height:46px}.game-feedback.good{background:#e7f8f0;color:#11684f}.game-feedback.bad{background:#fff0f3;color:#a72c4a}.game-controls{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:15px}.game-end{text-align:center;padding:28px 15px;background:#fff;border-radius:18px;border:1px solid #dce7f5}.game-score{font-size:42px;font-weight:900;color:#2368d8}.game-end h3{margin:8px 0;color:#123d72}.game-end p{color:#607786}
+@media(max-width:600px){.game-choices{grid-template-columns:1fr}.game-shell{padding:13px}.game-question{padding:14px}.game-question h3{font-size:17px}}
 </style>
 </head>
 <body>
@@ -33,7 +47,7 @@ body{background:radial-gradient(circle at 90% 0,#e1f4f4 0,transparent 28%),var(-
  <div class="brand">
  <svg class="brandmark" viewBox="0 0 100 100" role="img" aria-label="شعار مِداد"><path d="M8 67 Q29 35 49 63 Q63 37 91 26 L91 70 Q66 64 50 83 Q29 62 8 82Z" fill="#0a8990"/><path d="M14 65 Q31 43 48 65 L48 80 Q30 61 14 78Z" fill="#f4d99e"/><path d="M52 64 Q67 43 85 34 L85 64 Q66 63 52 80Z" fill="#f4d99e"/><path d="M48 64 L48 86" stroke="#fff" stroke-width="3"/><path d="M16 42 L22 35 M27 29 L32 21 M40 22 L42 13 M57 24 L63 17 M69 31 L78 25" stroke="#54c0c0" stroke-width="5" stroke-linecap="round"/><rect x="20" y="18" width="6" height="6" rx="1" fill="#54c0c0"/><rect x="32" y="9" width="6" height="6" rx="1" fill="#d4a640"/><rect x="60" y="8" width="6" height="6" rx="1" fill="#54c0c0"/></svg>
  <div><h1>مِداد</h1><p>المعالج الذكي لفجوات التعلّم</p></div></div>
- <p class="tagline">للمرحلتين الابتدائية والمتوسطة · من تشخيص الفجوة إلى قياس الأثر</p><div class="hero-chips"><span>📊 تحليل قائم على البيانات</span><span>🎯 تدخل علاجي موجّه</span><span>✨ نشاط ذكي جاهز للتطبيق</span></div>
+ <p class="tagline">المعالج الذكي لفجوات التعلّم للمرحلتين الابتدائية والمتوسطة · من تشخيص الفجوة إلى لعبة علاجية جاهزة وقياس الأثر</p><div class="hero-illustrations"><span><b>🧩</b> تشخيص فجوة التعلّم</span><span><b>🎮</b> لعبة علاجية جاهزة</span><span><b>📈</b> قياس أثر التدخل</span></div><div class="hero-chips"><span>📊 تحليل قائم على البيانات</span><span>🎯 تدخل علاجي موجّه</span><span>✨ نشاط ذكي جاهز للتطبيق</span></div>
  <span class="owner">حقوق الفكرة والمحتوى © بدور مبارك العصيمي · 2026</span>
 </header>
 <section class="journey no-print" aria-label="خطوات العمل في مِداد">
@@ -98,7 +112,7 @@ body{background:radial-gradient(circle at 90% 0,#e1f4f4 0,transparent 28%),var(-
 <div class="field"><label>طريقة التدخل</label><select id="approach"><option>شرح موجّه وتدريب متدرج</option><option>تعلم تعاوني</option><option>محطات تعلم</option><option>تعلم قائم على المشكلات</option><option>بطاقات وأنشطة قصيرة</option><option>أخرى</option></select></div>
 <div class="field"><label>مراعاة الفروق الفردية</label><textarea id="different" placeholder="دعم إضافي أو نشاط إثرائي"></textarea></div>
 <div class="field"><label>شواهد التنفيذ</label><textarea id="evidence" placeholder="ورقة عمل، تقويم قصير، ملاحظة أداء"></textarea></div>
-<div class="field"><label>نوع النشاط العلاجي المطلوب</label><select id="activityType"><option>ورقة عمل تفاعلية قصيرة</option><option>لعبة تعليمية صفية</option><option>بطاقات سؤال وجواب</option><option>نشاط تعاوني ضمن مجموعات</option><option>تحدٍ رقمي أو محاكاة</option><option>نشاط عملي خطوة بخطوة</option><option>تقويم علاجي قصير مع تغذية راجعة</option></select></div>
+<div class="field"><label>نوع اللعبة الجاهزة</label><select id="activityType"><option>تحدي اختيار من متعدد</option><option>صح أم خطأ</option><option>تحدي المراحل والنقاط</option></select></div>
 <div class="field"><label>مستوى النشاط</label><select id="activityLevel"><option>مبسط جدًا مع تدرج في الصعوبة</option><option>متوسط</option><option>متدرج: دعم ثم ممارسة مستقلة</option></select></div>
 <div class="field"><label>وقت التنفيذ</label><select id="activityTime"><option>5 دقائق</option><option>10 دقائق</option><option>15 دقيقة</option><option>20 دقيقة</option><option>حصة كاملة</option></select></div>
 <div class="field span3"><label>وصف الخطأ الشائع أو إجابة الطالبات (اختياري)</label><textarea id="commonError" placeholder="مثال: تخلط المتعلمات بين المكونات المادية والبرمجية"></textarea></div>
@@ -108,7 +122,7 @@ body{background:radial-gradient(circle at 90% 0,#e1f4f4 0,transparent 28%),var(-
 <div class="section">النشاط العلاجي</div>
 <div id="aiStatus" class="notice" role="status" aria-live="polite" data-state="idle">سيحاول مِداد إنشاء نشاط مرتبط بالمهارة. إذا تعذّر الاتصال، سيعرض قالبًا احتياطيًا ويبيّن سبب الفشل قدر الإمكان.</div>
 <div class="btns no-print"><button class="btn gold" id="offlineActivity">إنشاء نشاط احتياطي الآن</button><button class="btn secondary" id="copyPromptAI">نسخ طلب النشاط لاستخدامه في ChatGPT</button></div>
-<div id="activityOutput" class="output">لم يُولّد نشاط بعد.</div>
+<div id="activityOutput" class="output">🎮 ستظهر هنا لعبة علاجية تفاعلية جاهزة للتشغيل، مع أسئلة وإجابات وتغذية راجعة واحتساب تلقائي للنقاط.</div>
 <div class="btns no-print"><button class="btn secondary" id="copyActivity">نسخ النشاط</button><button class="btn secondary" id="useActivityInReport">إضافة النشاط إلى التقرير</button></div>
 <div class="section">مسودة الخطة</div><div id="planOutput" class="output">اضغطي «إنشاء مسودة الخطة» لبدء المسودة.</div>
 <div class="section">طلب جاهز لأداة ذكاء اصطناعي</div><div id="promptOutput" class="output">سيظهر هنا طلب قابل للنسخ.</div>
@@ -148,15 +162,16 @@ function makePlan(){let c=calc(),o=all();let s=`مِداد | مسودة خطة �
 $('makePlan').onclick=makePlan;
 $('makePrompt').onclick=()=>{$('promptOutput').textContent=`أنت خبير تربوي في علاج فجوات التعلّم للمرحلتين الابتدائية والمتوسطة في المملكة العربية السعودية. صمم خطة علاجية عملية ولا تخترع مراجع أو أسماء رسمية غير موثقة. إذا لم تتوفر معلومات كافية عن المنهج، وضّح ذلك.\nالمرحلة الدراسية: ${v('stage')||'غير محددة'}\nالمادة: ${v('subject')||'غير محددة'}\nالصف: ${v('grade')||'غير محدد'}\nالفصل الدراسي: ${v('term')||'غير محدد'}\nالوحدة: ${v('unit')||'غير محددة'}\nالدرس: ${v('lesson')||'غير محدد'}\nالمهارة: ${v('skill')||'غير محددة'}\nمصدر المهارة: ${v('source')||'غير محدد'} ${v('sourceDetail')}\nعدد المستهدفات: ${v('target')||'غير مدخل'}، المتقنات قبل: ${v('pre')||'غير مدخل'}، المتقنات بعد: ${v('post')||'غير مدخل'}\nالفجوة: ${v('gap')||'تحدد من البيانات المتاحة بحذر'}\nالهدف: ${v('goal')||'اقترح هدفًا قابلًا للقياس'}\nمدة التدخل: ${v('duration')}، الطريقة: ${v('approach')}\nالمطلوب: هدف إجرائي، خطوات تنفيذ، نشاطان متدرجان، خمسة أسئلة مع إجابات نموذجية مرتبطة بالمهارة، تقويم ختامي، معيار إتقان، شواهد وتوصيات. ميّز المعلومات المؤكدة عن المقترحات.`};
 async function copy(t){try{await navigator.clipboard.writeText(t);alert('تم النسخ.')}catch(e){let x=document.createElement('textarea');x.value=t;document.body.appendChild(x);x.select();document.execCommand('copy');x.remove();alert('تم النسخ.')}}$('copyPlan').onclick=()=>copy($('planOutput').textContent);
+let currentActivityText='';
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function drawReportChart(c){const el=$('reportChart');if(!el)return;if(!c.ok){el.innerHTML='<div class="muted">أدخلي الأعداد الصحيحة لإظهار الرسم البياني.</div>';return}const W=620,H=220,base=174,top=25,scale=130;const vals=[{label:'قبل التدخل',v:c.pr,x:190,color:'#0b8790'},{label:'بعد التدخل',v:c.ar,x:400,color:'#c9a24d'}];let s=`<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مقارنة نسبة الإتقان قبل التدخل وبعده"><line x1="65" y1="${base}" x2="555" y2="${base}" stroke="#cfdde2" stroke-width="2"/>`;[0,25,50,75,100].forEach(n=>{let y=base-(n/100)*scale;s+=`<line x1="65" y1="${y}" x2="555" y2="${y}" stroke="#e6eef0" stroke-dasharray="4 5"/><text x="50" y="${y+4}" text-anchor="end" font-size="11" fill="#6b7f8a">${n}%</text>`});vals.forEach(d=>{let h=(d.v/100)*scale,y=base-h;s+=`<rect x="${d.x-48}" y="${y}" width="96" height="${h}" rx="10" fill="${d.color}" opacity=".92"/><text x="${d.x}" y="${Math.max(16,y-9)}" text-anchor="middle" font-size="15" font-weight="700" fill="#173449">${d.v.toLocaleString('ar-SA',{maximumFractionDigits:1})}%</text><text x="${d.x}" y="${base+25}" text-anchor="middle" font-size="13" fill="#173449">${d.label}</text>`});s+='</svg>';el.innerHTML=s;}
-function refreshReport(){let c=calc(),o=all(),meta=[['المدرسة',o.school],['المعلمة',o.teacher],['قائدة المدرسة',o.principal],['التاريخ',o.date],['المرحلة الدراسية',o.stage],['المادة',o.subject],['الصف',o.grade],['الفصل الدراسي',o.term],['الوحدة',o.unit],['الدرس',o.lesson],['المهارة',o.skill],['مصدر المهارة',(o.source+' '+o.sourceDetail).trim()]];$('metaRows').innerHTML=meta.map(r=>`<tr><th>${esc(r[0])}</th><td>${esc(r[1]||'—')}</td></tr>`).join('');let rows=[['عدد المستهدفات',c.ok?c.t:'—'],['المتقنات قبل التدخل',c.ok?c.p:'—'],['غير المتقنات قبل التدخل',c.ok?c.t-c.p:'—'],['المتقنات بعد التدخل',c.ok?c.a:'—'],['نسبة الإتقان قبل التدخل',fmt(c.pr)],['نسبة الإتقان بعد التدخل',fmt(c.ar)],['التغير في الإتقان',c.ch===null?'—':(c.ch>0?'+':'')+c.ch.toLocaleString('ar-SA',{maximumFractionDigits:1})+' نقطة مئوية']];$('statsRows').innerHTML=rows.map(r=>`<tr><th>${esc(r[0])}</th><td>${esc(r[1])}</td></tr>`).join('');$('rPreBar').style.width=(c.pr??0)+'%';$('rPostBar').style.width=(c.ar??0)+'%';$('rPreLabel').textContent=fmt(c.pr);$('rPostLabel').textContent=fmt(c.ar);drawReportChart(c);$('rPlan').textContent=($('planOutput').textContent.startsWith('اضغطي')?'لم تُنشأ مسودة بعد. انتقلي إلى قسم الخطة العلاجية.':$('planOutput').textContent)+(($('activityOutput').textContent!=='لم يُولّد نشاط بعد.')?'\n\nالنشاط العلاجي المولّد بالذكاء الاصطناعي:\n'+$('activityOutput').textContent:'');$('rRec').textContent=c.ok?$('interpretation').textContent+'\n\nالتوصية: راجعي الأخطاء الشائعة ووثقي الأنشطة، ثم أعيدي قياس المهارة نفسها. إذا لم يتحقق التحسن المتوقع، عدلي الاستراتيجية وأعيدي التقويم.':'أدخلي الأعداد الصحيحة وتحققي من عدم تجاوز عدد المتقنات لإجمالي المستهدفات.';$('rDate').textContent=o.date||'';renderSaved()}
+function refreshReport(){let c=calc(),o=all(),meta=[['المدرسة',o.school],['المعلمة',o.teacher],['قائدة المدرسة',o.principal],['التاريخ',o.date],['المرحلة الدراسية',o.stage],['المادة',o.subject],['الصف',o.grade],['الفصل الدراسي',o.term],['الوحدة',o.unit],['الدرس',o.lesson],['المهارة',o.skill],['مصدر المهارة',(o.source+' '+o.sourceDetail).trim()]];$('metaRows').innerHTML=meta.map(r=>`<tr><th>${esc(r[0])}</th><td>${esc(r[1]||'—')}</td></tr>`).join('');let rows=[['عدد المستهدفات',c.ok?c.t:'—'],['المتقنات قبل التدخل',c.ok?c.p:'—'],['غير المتقنات قبل التدخل',c.ok?c.t-c.p:'—'],['المتقنات بعد التدخل',c.ok?c.a:'—'],['نسبة الإتقان قبل التدخل',fmt(c.pr)],['نسبة الإتقان بعد التدخل',fmt(c.ar)],['التغير في الإتقان',c.ch===null?'—':(c.ch>0?'+':'')+c.ch.toLocaleString('ar-SA',{maximumFractionDigits:1})+' نقطة مئوية']];$('statsRows').innerHTML=rows.map(r=>`<tr><th>${esc(r[0])}</th><td>${esc(r[1])}</td></tr>`).join('');$('rPreBar').style.width=(c.pr??0)+'%';$('rPostBar').style.width=(c.ar??0)+'%';$('rPreLabel').textContent=fmt(c.pr);$('rPostLabel').textContent=fmt(c.ar);drawReportChart(c);$('rPlan').textContent=($('planOutput').textContent.startsWith('اضغطي')?'لم تُنشأ مسودة بعد. انتقلي إلى قسم الخطة العلاجية.':$('planOutput').textContent)+((currentActivityText && currentActivityText.length>0)?'\n\nالنشاط العلاجي المولّد بالذكاء الاصطناعي:\n'+currentActivityText:'');$('rRec').textContent=c.ok?$('interpretation').textContent+'\n\nالتوصية: راجعي الأخطاء الشائعة ووثقي الأنشطة، ثم أعيدي قياس المهارة نفسها. إذا لم يتحقق التحسن المتوقع، عدلي الاستراتيجية وأعيدي التقويم.':'أدخلي الأعداد الصحيحة وتحققي من عدم تجاوز عدد المتقنات لإجمالي المستهدفات.';$('rDate').textContent=o.date||'';renderSaved()}
 $('refresh').onclick=refreshReport;$('print').onclick=()=>{refreshReport();window.print()};
 function records(){try{return JSON.parse(localStorage.getItem('midad_v2_records')||'[]')}catch(e){return[]}}
 function save(){let c=calc();if(!c.ok){alert('أدخلي الأعداد الثلاثة بشكل صحيح قبل الحفظ.');return}let r={...all(),metrics:{preRate:c.pr,postRate:c.ar,change:c.ch,notMastered:c.t-c.p},plan:$('planOutput').textContent};let a=records();a.unshift(r);localStorage.setItem('midad_v2_records',JSON.stringify(a.slice(0,40)));renderSaved();alert('تم حفظ السجل محليًا في هذا المتصفح.')}
 $('save').onclick=save;$('save2').onclick=save;
 function renderSaved(){let box=$('savedRecords');if(!box)return;let a=records();if(!a.length){box.innerHTML='<p class="muted">لا توجد سجلات محفوظة حتى الآن.</p>';return}box.innerHTML=a.map((r,i)=>`<div class="saved"><div><strong>${esc(r.skill||r.lesson||'سجل بدون عنوان')}</strong><small>${esc(r.subject||'')} · ${esc(r.grade||'')} · الإتقان بعد التدخل: ${fmt(r.metrics?.postRate)}</small></div><div><button class="btn secondary" data-load="${i}">استعادة</button> <button class="btn danger" data-del="${i}">حذف</button></div></div>`).join('');box.querySelectorAll('[data-load]').forEach(b=>b.onclick=()=>{let r=records()[+b.dataset.load];ids.forEach(k=>{if(r[k]!==undefined&&k!=='grade'&&k!=='subject')$(k).value=r[k]});updateGrades(r.grade);updateSubjects(r.subject);if(r.plan)$('planOutput').textContent=r.plan;calc();refreshReport();alert('تمت استعادة السجل.')});box.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{let a=records();a.splice(+b.dataset.del,1);localStorage.setItem('midad_v2_records',JSON.stringify(a));renderSaved()})}
-$('goPlan').onclick=()=>{makePlan();go('plan')};$('clear').onclick=()=>{if(!confirm('هل تريدين مسح الحقول الحالية؟'))return;ids.forEach(k=>{if(k!=='teacher'&&k!=='date')$(k).value=''});$('teacher').value='بدور مبارك العصيمي';updateGrades();updateSubjects();$('planOutput').textContent='اضغطي «إنشاء مسودة الخطة» لبدء المسودة.';$('promptOutput').textContent='سيظهر هنا طلب قابل للنسخ.';$('activityOutput').textContent='لم يُولّد نشاط بعد.';$('aiStatus').textContent='بعد إعداد الاتصال الآمن، سيولّد مِداد نشاطًا مرتبطًا بالمهارة المدخلة مباشرة.';calc();refreshReport()};
+$('goPlan').onclick=()=>{makePlan();go('plan')};$('clear').onclick=()=>{if(!confirm('هل تريدين مسح الحقول الحالية؟'))return;ids.forEach(k=>{if(k!=='teacher'&&k!=='date')$(k).value=''});$('teacher').value='بدور مبارك العصيمي';updateGrades();updateSubjects();$('planOutput').textContent='اضغطي «إنشاء مسودة الخطة» لبدء المسودة.';$('promptOutput').textContent='سيظهر هنا طلب قابل للنسخ.';$('activityOutput').innerHTML='🎮 ستظهر هنا لعبة علاجية تفاعلية جاهزة للتشغيل، مع أسئلة وإجابات وتغذية راجعة واحتساب تلقائي للنقاط.';currentActivityText='';$('aiStatus').textContent='بعد إعداد الاتصال الآمن، سيولّد مِداد نشاطًا مرتبطًا بالمهارة المدخلة مباشرة.';calc();refreshReport()};
 $('csv').onclick=()=>{let c=calc(),o=all(),rows=[['الحقل','القيمة'],...Object.entries(o),['نسبة الإتقان قبل التدخل',fmt(c.pr)],['نسبة الإتقان بعد التدخل',fmt(c.ar)],['التغير بالنقاط المئوية',c.ch??''],['غير المتقنات قبل التدخل',c.ok?c.t-c.p:'']];let csv='\ufeff'+rows.map(r=>r.map(x=>'"'+String(x??'').replace(/"/g,'""')+'"').join(',')).join('\r\n');let u=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));let a=document.createElement('a');a.href=u;a.download='midad-report.csv';a.click();URL.revokeObjectURL(u)};
 
 function buildActivityPrompt(){
@@ -182,18 +197,29 @@ function buildActivityPrompt(){
 طريقة التدخل المفضلة: ${o.approach||'تدريب متدرج'}
 مراعاة الفروق الفردية: ${o.different||'اقترح دعمًا إضافيًا وإثراءً'}
 ملاحظات: ${o.notes||'لا توجد'}
-أخرج النشاط باللغة العربية، بعناوين واضحة وبهذا الترتيب:
-1. عنوان جذاب للنشاط.
-2. المهارة التي يعالجها (أعد صياغة المدخل فقط ولا تدّع توثيقها).
-3. الهدف السلوكي ومعيار النجاح.
-4. الأدوات وتجهيزات المعلمة.
-5. تعليمات تنفيذ خطوة بخطوة مع توزيع الوقت.
-6. محتوى النشاط الفعلي الجاهز: أسئلة أو بطاقات أو سيناريوهات أو خطوات مهمة، بحسب النوع المختار، لا تكتفِ باقتراح أن تنشئ المعلمة هذه المواد.
-7. الإجابات النموذجية والتغذية الراجعة لكل سؤال أو خطوة.
-8. طريقة تكييف النشاط للمتعثرات، وامتداد قصير للمتقنات.
-9. تقويم ختامي من 3 أسئلة أو مهام، مع الإجابات.
-10. مؤشر نجاح يسجل بعد التنفيذ، وشاهد مناسب للتوثيق.
-اجعل النشاط عمليًا، موجزًا بما يكفي للتطبيق، متوافقًا مع عمر المرحلة، ولا تضع أسماء طالبات أو بيانات شخصية. ضع تنبيهًا في النهاية بأن المعلمة تراجع دقة المحتوى ومطابقته للمصدر قبل التطبيق.`;
+المطلوب ليس نصًا تصممه المعلمة لاحقًا؛ المطلوب لعبة رقمية مصغّرة جاهزة للتشغيل داخل صفحة ويب. أخرج JSON صالحًا فقط دون Markdown أو شرح خارجه، وبالبنية التالية حرفيًا:
+{"title":"عنوان اللعبة","objective":"هدف علاجي قابل للقياس","instructions":"تعليمات قصيرة للطالبة","time":"الوقت المقترح","questions":[{"question":"نص السؤال","choices":["الخيار الأول","الخيار الثاني","الخيار الثالث","الخيار الرابع"],"answerIndex":0,"explanation":"تغذية راجعة تشرح الإجابة بلغة مناسبة للعمر"}]}
+أنشئ 5 أسئلة فعلية مرتبطة بالمهارة والدرس، ولكل سؤال 3 أو 4 خيارات، ويكون answerIndex رقمًا من 0 إلى 3 مطابقًا لموضع الإجابة الصحيحة في choices، مع explanation موجز. في نمط صح أم خطأ اجعل الخيارات بالضبط ["صح","خطأ"] واستخدم answerIndex 0 أو 1. ابدأ بأسئلة سهلة ثم ارفع التحدي تدريجيًا. تجنب اختلاق معلومات من المنهج أو ادعاء أن المحتوى رسمي؛ إذا كانت بيانات المهارة غير كافية فأنشئ أسئلة عامة آمنة واذكر ذلك في objective أو instructions. لا تضع أسماء طالبات أو بيانات شخصية. يجب أن تكون اللعبة قابلة للعب مباشرة: النقر على الإجابات، إظهار صحة/خطأ وتغذية راجعة، احتساب النقاط، ثم شاشة نتيجة نهائية. راجع أن JSON صالح تمامًا وأن جميع الأسئلة والإجابات مكتملة.`;
+}
+function extractGame(raw){
+ let t=String(raw||'').trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/,'');
+ const a=t.indexOf('{'), b=t.lastIndexOf('}'); if(a>=0&&b>a)t=t.slice(a,b+1);
+ const g=JSON.parse(t);
+ if(!g.title||!Array.isArray(g.questions)||g.questions.length<3)throw new Error('صيغة اللعبة غير مكتملة. أعيدي المحاولة.');
+ g.questions=g.questions.slice(0,8).map(q=>{const choices=Array.isArray(q.choices)?q.choices.map(String):[];const idx=Number(q.answerIndex);if(!q.question||choices.length<2||!Number.isInteger(idx)||idx<0||idx>=choices.length)throw new Error('أحد أسئلة اللعبة غير مكتمل.');return {question:String(q.question),choices,answerIndex:idx,explanation:String(q.explanation||'راجعي الفكرة ثم انتقلي للسؤال التالي.')};});
+ return g;
+}
+function renderGame(game){
+ currentActivityText=`${game.title}\nالهدف: ${game.objective||'ممارسة المهارة المستهدفة'}\nالتعليمات: ${game.instructions||'اختاري الإجابة الصحيحة'}\nالأسئلة: ${game.questions.map((q,i)=>`${i+1}. ${q.question}\n${q.choices.map((c,j)=>`${j+1}) ${c}`).join('\n')}\nالإجابة: ${q.choices[q.answerIndex]}\nالتغذية الراجعة: ${q.explanation}`).join('\n\n')}\nتنبيه: تراجع المعلمة دقة المحتوى ومطابقته للمصدر المعتمد قبل التطبيق.`;
+ const root=$('activityOutput'); let at=0,score=0,answered=false;
+ function paint(){
+  if(at>=game.questions.length){const pct=Math.round(score/game.questions.length*100);root.innerHTML=`<div class="game-shell"><div class="game-end"><div style="font-size:44px">${pct>=80?'🏆':pct>=60?'⭐':'💪'}</div><h3>انتهت اللعبة: ${esc(game.title)}</h3><div class="game-score">${score} / ${game.questions.length}</div><p>نسبة الإجابات الصحيحة: ${pct}٪</p><p>${pct>=80?'أحسنتِ! أتقنتِ معظم الأسئلة.':pct>=60?'أداء جيد، راجعي الأسئلة التي أخطأتِ فيها ثم أعيدي المحاولة.':'لا بأس، أعيدي المحاولة واستفيدي من التغذية الراجعة.'}</p><button class="btn primary" id="restartGame">🔄 إعادة اللعب</button></div><p class="muted">تنبيه للمعلمة: راجعي ملاءمة الأسئلة والإجابات للمصدر المعتمد قبل التطبيق.</p></div>`;$('restartGame').onclick=()=>{at=0;score=0;answered=false;paint()};return;}
+  const q=game.questions[at];answered=false;
+  root.innerHTML=`<div class="game-shell"><div class="game-top"><div><div class="game-pill">🎮 لعبة علاجية تفاعلية</div><h3 class="game-title">${esc(game.title)}</h3></div><div class="game-meta"><span class="game-pill">السؤال ${at+1} من ${game.questions.length}</span><span class="game-pill points">⭐ النقاط: <b id="gameScore">${score}</b></span></div></div><p><b>الهدف:</b> ${esc(game.objective||'ممارسة المهارة المستهدفة')}</p><p><b>طريقة اللعب:</b> ${esc(game.instructions||'اختاري الإجابة الصحيحة لتحصلي على نقطة.')}</p><div class="game-progress"><div style="width:${at/game.questions.length*100}%"></div></div><div class="game-question"><h3>${esc(q.question)}</h3><div class="game-choices">${q.choices.map((c,i)=>`<button class="game-choice" data-choice="${i}">${['أ','ب','ج','د'][i]||i+1}. ${esc(c)}</button>`).join('')}</div><div class="game-feedback" id="gameFeedback" aria-live="polite">اختاري إجابة للمتابعة.</div><div class="game-controls"><span class="muted">كل إجابة صحيحة = نقطة واحدة</span><button class="btn primary" id="nextGame" disabled>${at===game.questions.length-1?'عرض النتيجة':'السؤال التالي ←'}</button></div></div></div>`;
+  root.querySelectorAll('[data-choice]').forEach(btn=>btn.onclick=()=>{if(answered)return;answered=true;const chosen=Number(btn.dataset.choice),ok=chosen===q.answerIndex;if(ok)score++;root.querySelectorAll('[data-choice]').forEach((b,i)=>{b.disabled=true;if(i===q.answerIndex)b.classList.add('correct');else if(i===chosen)b.classList.add('wrong')});const f=$('gameFeedback');f.className='game-feedback '+(ok?'good':'bad');f.textContent=(ok?'إجابة صحيحة! أحسنتِ. ':'ليست الإجابة الصحيحة. ')+q.explanation;$('gameScore').textContent=score;$('nextGame').disabled=false;});
+  $('nextGame').onclick=()=>{if(!answered)return;at++;paint()};
+ }
+ paint();
 }
 function makeOfflineActivity(){
  const o=all();
@@ -241,7 +267,9 @@ function makeOfflineActivity(){
 يسجل عدد الإجابات الصحيحة من إجمالي الطالبات المستهدفات، ويقترح معيارًا أوليًا للإتقان تحدده المعلمة مسبقًا (مثل 4 من 5 بنود). الشاهد: بطاقة عمل مجهولة الأسماء أو سجل نتائج إجمالي.
 
 تنبيه: هذا نشاط احتياطي من قالب محلي، وليس محتوى مولدًا بواسطة نموذج ذكاء اصطناعي. يجب على المعلمة إكمال الأمثلة والإجابات من المصدر المعتمد ومراجعة ملاءمته قبل التطبيق.`;
- $('activityOutput').textContent=activity;
+ currentActivityText=activity;
+ const fallbackGame={title:'تحدّي المهارة: '+o.skill,objective:'مراجعة المهارة المستهدفة قبل التطبيق',instructions:'هذه نسخة تدريبية احتياطية عامة؛ راجعي محتواها وأكمليها وفق الدرس قبل استخدامها مع الطالبات.',questions:[{question:'ما أول خطوة مناسبة قبل تنفيذ المهارة «'+o.skill+'»؟',choices:['قراءة المطلوب وتحديد الهدف','البدء دون قراءة التعليمات','تجاهل خطوات العمل'],answerIndex:0,explanation:'قراءة المطلوب تساعد على فهم المهمة وتحديد الخطوة المناسبة.'},{question:'إذا واجهتِ خطأ أثناء تطبيق المهارة، فما التصرف الأفضل؟',choices:['تكرار الخطأ دون مراجعة','مراجعة الخطوات وتحديد موضع الخطأ','ترك المهمة مباشرة'],answerIndex:1,explanation:'مراجعة الخطوات تساعد على تحديد موضع الخطأ وتصحيحه.'},{question:'كيف نتحقق من إتقان المهارة؟',choices:['بالتخمين','بإنجاز مهمة مشابهة والتحقق من النتيجة','بإنهاء الوقت فقط'],answerIndex:1,explanation:'تطبيق المهارة على مهمة والتحقق من النتيجة يقدم دليلًا أفضل على الإتقان.'}]};
+ renderGame(fallbackGame);
  $('aiStatus').dataset.state='idle';$('aiStatus').textContent='تم إنشاء نشاط احتياطي فوري دون اتصال خارجي. هذا قالب منظم وليس توليدًا ذكيًا؛ أكملي الأمثلة والإجابات من المصدر المعتمد قبل التطبيق.';
 }
 $('offlineActivity').onclick=makeOfflineActivity;
@@ -258,7 +286,7 @@ $('generateActivity').onclick=async()=>{
    try { data=JSON.parse(raw); } catch(parseError) { throw new Error('رد غير متوقع من الخادم (HTTP '+res.status+').'); }
    if(!res.ok) throw new Error(data.error||('تعذر التوليد (HTTP '+res.status+').'));
    if(!data.activity) throw new Error('لم يصل محتوى النشاط.');
-   $('activityOutput').textContent=data.activity;
+   const game=extractGame(data.activity);renderGame(game);
    $('aiStatus').dataset.state='success';$('aiStatus').textContent='نجح التوليد عبر خدمة الذكاء الاصطناعي. راجعي دقة المحتوى ومطابقته للمصدر المعتمد قبل التطبيق.';
  }catch(e){
    const reason=e.name==='AbortError'?'انتهت مهلة انتظار المتصفح قبل وصول الرد':(e.message||'خطأ غير معروف');
@@ -267,7 +295,7 @@ $('generateActivity').onclick=async()=>{
    $('aiStatus').textContent='لم ينجح التوليد المباشر: '+reason+'. ظهر النشاط الاحتياطي لضمان استمرار العمل. جرّبي نسخ الطلب إلى ChatGPT للحصول على نشاط تخصصي جديد. هذا التنبيه لا يعني وحده أن مفتاح API غير صالح.';
  }finally{clearTimeout(timer);btn.disabled=false;btn.textContent='✨ ولّدي النشاط بالذكاء الاصطناعي';}
 };
-$('copyActivity').onclick=()=>copy($('activityOutput').textContent);
+$('copyActivity').onclick=()=>copy(currentActivityText||$('activityOutput').innerText);
 $('useActivityInReport').onclick=()=>{refreshReport();go('report')};
 
 calc();refreshReport();
